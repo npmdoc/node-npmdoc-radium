@@ -1,0 +1,1090 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/formidablelabs/radium"
+
+    >radium (v0.18.2)</a>
+</h1>
+<h4>A set of tools to manage inline styles on React elements</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.radium">module radium</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.style_keeper">
+            function <span class="apidocSignatureSpan">radium.</span>style_keeper
+            <span class="apidocSignatureSpan">(userAgent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">radium.</span>index</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">radium.</span>merge_styles</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">radium.</span>mouse_up_listener</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">radium.</span>prefixer</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">radium.</span>style_keeper.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.radium.index">module radium.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.index.checkProps">
+            function <span class="apidocSignatureSpan">radium.index.</span>checkProps
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.index.keyframes">
+            function <span class="apidocSignatureSpan">radium.index.</span>keyframes
+            <span class="apidocSignatureSpan">(_ref)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.index.mergeStyleArray">
+            function <span class="apidocSignatureSpan">radium.index.</span>mergeStyleArray
+            <span class="apidocSignatureSpan">(_ref)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.index.prefix">
+            function <span class="apidocSignatureSpan">radium.index.</span>prefix
+            <span class="apidocSignatureSpan">(_ref)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.index.removeNestedStyles">
+            function <span class="apidocSignatureSpan">radium.index.</span>removeNestedStyles
+            <span class="apidocSignatureSpan">(_ref)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.index.resolveInteractionStyles">
+            function <span class="apidocSignatureSpan">radium.index.</span>resolveInteractionStyles
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.index.resolveMediaQueries">
+            function <span class="apidocSignatureSpan">radium.index.</span>resolveMediaQueries
+            <span class="apidocSignatureSpan">(_ref3)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.index.visited">
+            function <span class="apidocSignatureSpan">radium.index.</span>visited
+            <span class="apidocSignatureSpan">(_ref)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.radium.merge_styles">module radium.merge_styles</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.merge_styles.isNestedStyle">
+            function <span class="apidocSignatureSpan">radium.merge_styles.</span>isNestedStyle
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.merge_styles.mergeStyles">
+            function <span class="apidocSignatureSpan">radium.merge_styles.</span>mergeStyles
+            <span class="apidocSignatureSpan">(styles)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.radium.mouse_up_listener">module radium.mouse_up_listener</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.mouse_up_listener.__triggerForTests">
+            function <span class="apidocSignatureSpan">radium.mouse_up_listener.</span>__triggerForTests
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.mouse_up_listener.subscribe">
+            function <span class="apidocSignatureSpan">radium.mouse_up_listener.</span>subscribe
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.radium.prefixer">module radium.prefixer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.prefixer.getPrefixedKeyframes">
+            function <span class="apidocSignatureSpan">radium.prefixer.</span>getPrefixedKeyframes
+            <span class="apidocSignatureSpan">(userAgent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.prefixer.getPrefixedStyle">
+            function <span class="apidocSignatureSpan">radium.prefixer.</span>getPrefixedStyle
+            <span class="apidocSignatureSpan">(style, userAgent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.radium.style_keeper">module radium.style_keeper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.style_keeper.style_keeper">
+            function <span class="apidocSignatureSpan">radium.</span>style_keeper
+            <span class="apidocSignatureSpan">(userAgent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.radium.style_keeper.prototype">module radium.style_keeper.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.style_keeper.prototype._emitChange">
+            function <span class="apidocSignatureSpan">radium.style_keeper.prototype.</span>_emitChange
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.style_keeper.prototype.addCSS">
+            function <span class="apidocSignatureSpan">radium.style_keeper.prototype.</span>addCSS
+            <span class="apidocSignatureSpan">(css)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.style_keeper.prototype.getCSS">
+            function <span class="apidocSignatureSpan">radium.style_keeper.prototype.</span>getCSS
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.radium.style_keeper.prototype.subscribe">
+            function <span class="apidocSignatureSpan">radium.style_keeper.prototype.</span>subscribe
+            <span class="apidocSignatureSpan">(listener)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.radium" id="apidoc.module.radium">module radium</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.radium.style_keeper" id="apidoc.element.radium.style_keeper">
+        function <span class="apidocSignatureSpan">radium.</span>style_keeper
+        <span class="apidocSignatureSpan">(userAgent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function StyleKeeper(userAgent) {
+  _classCallCheck(this, StyleKeeper);
+
+  this._userAgent = userAgent;
+  this._listeners = [];
+  this._cssSet = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.radium.index" id="apidoc.module.radium.index">module radium.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.radium.index.checkProps" id="apidoc.element.radium.index.checkProps">
+        function <span class="apidocSignatureSpan">radium.index.</span>checkProps
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkProps(config) {
+  var componentName = config.componentName,
+      style = config.style;
+
+  if ((typeof style === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : _typeof(style)) !== &#x27;object&#x27; || !style) {
+    return;
+  }
+
+  var styleKeys = Object.keys(style);
+  styleKeys.forEach(function (styleKey) {
+    if (Array.isArray(shorthandPropertyExpansions[styleKey]) &#x26;&#x26; shorthandPropertyExpansions[styleKey].some(function (sp) {
+      return styleKeys.indexOf(sp) !== -1;
+    })) {
+      if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+<span class="apidocCodeCommentSpan">        /* eslint-disable no-console */
+</span>        console.warn(&#x27;Radium: property &#x22;&#x27; + styleKey + &#x27;&#x22; in style object&#x27;, style, &#x27;: do not mix longhand and &#x27; + &#x27;shorthand properties
+ in the same style object. Check the render &#x27; + &#x27;method of &#x27; + componentName + &#x27;.&#x27;, &#x27;See https://github.com/FormidableLabs/radium
+/issues/95 for more &#x27; + &#x27;information.&#x27;);
+        /* eslint-enable no-console */
+      }
+    }
+  });
+
+  styleKeys.forEach(function (k) {
+    return _checkProps(_extends({}, config, { style: style[k] }));
+  });
+  return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.radium.index.keyframes" id="apidoc.element.radium.index.keyframes">
+        function <span class="apidocSignatureSpan">radium.index.</span>keyframes
+        <span class="apidocSignatureSpan">(_ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function keyframesPlugin(_ref) {
+  var addCSS = _ref.addCSS,
+      config = _ref.config,
+      style = _ref.style;
+
+  var newStyle = Object.keys(style).reduce(function (newStyleInProgress, key) {
+    var value = style[key];
+    if (key === &#x27;animationName&#x27; &#x26;&#x26; value &#x26;&#x26; value.__radiumKeyframes) {
+      var keyframesValue = value;
+
+      var _keyframesValue$__pro = keyframesValue.__process(config.userAgent),
+          animationName = _keyframesValue$__pro.animationName,
+          css = _keyframesValue$__pro.css;
+
+      addCSS(css);
+      value = animationName;
+    }
+
+    newStyleInProgress[key] = value;
+    return newStyleInProgress;
+  }, {});
+  return { style: newStyle };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.radium.index.mergeStyleArray" id="apidoc.element.radium.index.mergeStyleArray">
+        function <span class="apidocSignatureSpan">radium.index.</span>mergeStyleArray
+        <span class="apidocSignatureSpan">(_ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mergeStyleArrayPlugin(_ref) {
+  var style = _ref.style,
+      mergeStyles = _ref.mergeStyles;
+
+  // eslint-disable-line no-shadow
+  var newStyle = Array.isArray(style) ? mergeStyles(style) : style;
+  return { style: newStyle };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.radium.index.prefix" id="apidoc.element.radium.index.prefix">
+        function <span class="apidocSignatureSpan">radium.index.</span>prefix
+        <span class="apidocSignatureSpan">(_ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prefixPlugin(_ref) {
+  var config = _ref.config,
+      style = _ref.style;
+
+  var newStyle = (0, _prefixer.getPrefixedStyle)(style, config.userAgent);
+  return { style: newStyle };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+// Returns a new style object with vendor prefixes added to property names
+// and values.
+function getPrefixedStyle(style, userAgent) {
+  var styleWithFallbacks = transformValues(style);
+  var prefixer = getPrefixer(userAgent);
+  var prefixedStyle = prefixer.<span class="apidocCodeKeywordSpan">prefix</span>(styleWithFallbacks);
+  return prefixedStyle;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.radium.index.removeNestedStyles" id="apidoc.element.radium.index.removeNestedStyles">
+        function <span class="apidocSignatureSpan">radium.index.</span>removeNestedStyles
+        <span class="apidocSignatureSpan">(_ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeNestedStyles(_ref) {
+  var isNestedStyle = _ref.isNestedStyle,
+      style = _ref.style;
+
+  // eslint-disable-line no-shadow
+  var newStyle = Object.keys(style).reduce(function (newStyleInProgress, key) {
+    var value = style[key];
+    if (!isNestedStyle(value)) {
+      newStyleInProgress[key] = value;
+    }
+    return newStyleInProgress;
+  }, {});
+
+  return {
+    style: newStyle
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.radium.index.resolveInteractionStyles" id="apidoc.element.radium.index.resolveInteractionStyles">
+        function <span class="apidocSignatureSpan">radium.index.</span>resolveInteractionStyles
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resolveInteractionStyles(config) {
+  var ExecutionEnvironment = config.ExecutionEnvironment,
+      getComponentField = config.getComponentField,
+      getState = config.getState,
+      mergeStyles = config.mergeStyles,
+      props = config.props,
+      setState = config.setState,
+      style = config.style;
+
+
+  var newComponentFields = {};
+  var newProps = {};
+
+  // Only add handlers if necessary
+  if (style[&#x27;:hover&#x27;]) {
+    // Always call the existing handler if one is already defined.
+    // This code, and the very similar ones below, could be abstracted a bit
+    // more, but it hurts readability IMO.
+    var existingOnMouseEnter = props.onMouseEnter;
+    newProps.onMouseEnter = function (e) {
+      existingOnMouseEnter &#x26;&#x26; existingOnMouseEnter(e);
+      setState(&#x27;:hover&#x27;, true);
+    };
+
+    var existingOnMouseLeave = props.onMouseLeave;
+    newProps.onMouseLeave = function (e) {
+      existingOnMouseLeave &#x26;&#x26; existingOnMouseLeave(e);
+      setState(&#x27;:hover&#x27;, false);
+    };
+  }
+
+  if (style[&#x27;:active&#x27;]) {
+    var existingOnMouseDown = props.onMouseDown;
+    newProps.onMouseDown = function (e) {
+      existingOnMouseDown &#x26;&#x26; existingOnMouseDown(e);
+      newComponentFields._lastMouseDown = Date.now();
+      setState(&#x27;:active&#x27;, &#x27;viamousedown&#x27;);
+    };
+
+    var existingOnKeyDown = props.onKeyDown;
+    newProps.onKeyDown = function (e) {
+      existingOnKeyDown &#x26;&#x26; existingOnKeyDown(e);
+      if (e.key === &#x27; &#x27; || e.key === &#x27;Enter&#x27;) {
+        setState(&#x27;:active&#x27;, &#x27;viakeydown&#x27;);
+      }
+    };
+
+    var existingOnKeyUp = props.onKeyUp;
+    newProps.onKeyUp = function (e) {
+      existingOnKeyUp &#x26;&#x26; existingOnKeyUp(e);
+      if (e.key === &#x27; &#x27; || e.key === &#x27;Enter&#x27;) {
+        setState(&#x27;:active&#x27;, false);
+      }
+    };
+  }
+
+  if (style[&#x27;:focus&#x27;]) {
+    var existingOnFocus = props.onFocus;
+    newProps.onFocus = function (e) {
+      existingOnFocus &#x26;&#x26; existingOnFocus(e);
+      setState(&#x27;:focus&#x27;, true);
+    };
+
+    var existingOnBlur = props.onBlur;
+    newProps.onBlur = function (e) {
+      existingOnBlur &#x26;&#x26; existingOnBlur(e);
+      setState(&#x27;:focus&#x27;, false);
+    };
+  }
+
+  if (style[&#x27;:active&#x27;] &#x26;&#x26; !getComponentField(&#x27;_radiumMouseUpListener&#x27;) &#x26;&#x26; ExecutionEnvironment.canUseEventListeners) {
+    newComponentFields._radiumMouseUpListener = _mouseUpListener2.default.subscribe(function () {
+      Object.keys(getComponentField(&#x27;state&#x27;)._radiumStyleState).forEach(function (key) {
+        if (getState(&#x27;:active&#x27;, key) === &#x27;viamousedown&#x27;) {
+          setState(&#x27;:active&#x27;, false, key);
+        }
+      });
+    });
+  }
+
+  // Merge the styles in the order they were defined
+  var interactionStyles = props.disabled ? [style[&#x27;:disabled&#x27;]] : Object.keys(style).filter(function (name) {
+    return _isInteractiveStyleField(name) &#x26;&#x26; getState(name);
+  }).map(function (name) {
+    return style[name];
+  });
+
+  var newStyle = mergeStyles([style].concat(interactionStyles));
+
+  // Remove interactive styles
+  newStyle = Object.keys(newStyle).reduce(function (styleWithoutInteractions, name) {
+    if (!_isInteractiveStyleField(name) &#x26;&#x26; name !== &#x27;:disabled&#x27;) {
+      styleWithoutInteractions[name] = newStyle[name];
+    }
+    return styleWithoutInteractions;
+  }, {});
+
+  return {
+    componentFields: newComponentFields,
+    props: newProps,
+    style: newStyle
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.radium.index.resolveMediaQueries" id="apidoc.element.radium.index.resolveMediaQueries">
+        function <span class="apidocSignatureSpan">radium.index.</span>resolveMediaQueries
+        <span class="apidocSignatureSpan">(_ref3)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resolveMediaQueries(_ref3) {
+  var ExecutionEnvironment = _ref3.ExecutionEnvironment,
+      addCSS = _ref3.addCSS,
+      appendImportantToEachValue = _ref3.appendImportantToEachValue,
+      config = _ref3.config,
+      cssRuleSetToString = _ref3.cssRuleSetToString,
+      getComponentField = _ref3.getComponentField,
+      getGlobalState = _ref3.getGlobalState,
+      hash = _ref3.hash,
+      isNestedStyle = _ref3.isNestedStyle,
+      mergeStyles = _ref3.mergeStyles,
+      props = _ref3.props,
+      setState = _ref3.setState,
+      style = _ref3.style;
+
+  // eslint-disable-line no-shadow
+  var newStyle = _removeMediaQueries(style);
+  var mediaQueryClassNames = _topLevelRulesToCSS({
+    addCSS: addCSS,
+    appendImportantToEachValue: appendImportantToEachValue,
+    cssRuleSetToString: cssRuleSetToString,
+    hash: hash,
+    isNestedStyle: isNestedStyle,
+    style: style,
+    userAgent: config.userAgent
+  });
+
+  var newProps = mediaQueryClassNames ? {
+    className: mediaQueryClassNames + (props.className ? &#x27; &#x27; + props.className : &#x27;&#x27;)
+  } : null;
+
+  var matchMedia = config.matchMedia || _getWindowMatchMedia(ExecutionEnvironment);
+
+  if (!matchMedia) {
+    return {
+      props: newProps,
+      style: newStyle
+    };
+  }
+
+  var listenersByQuery = _extends({}, getComponentField(&#x27;_radiumMediaQueryListenersByQuery&#x27;));
+  var mediaQueryListsByQuery = getGlobalState(&#x27;mediaQueryListsByQuery&#x27;) || {};
+
+  Object.keys(style).filter(function (name) {
+    return name.indexOf(&#x27;@media&#x27;) === 0;
+  }).map(function (query) {
+    var nestedRules = _filterObject(style[query], isNestedStyle);
+
+    if (!Object.keys(nestedRules).length) {
+      return;
+    }
+
+    var mql = _subscribeToMediaQuery({
+      listener: function listener() {
+        return setState(query, mql.matches, &#x27;_all&#x27;);
+      },
+      listenersByQuery: listenersByQuery,
+      matchMedia: matchMedia,
+      mediaQueryListsByQuery: mediaQueryListsByQuery,
+      query: query
+    });
+
+    // Apply media query states
+    if (mql.matches) {
+      newStyle = mergeStyles([newStyle, nestedRules]);
+    }
+  });
+
+  return {
+    componentFields: {
+      _radiumMediaQueryListenersByQuery: listenersByQuery
+    },
+    globalState: { mediaQueryListsByQuery: mediaQueryListsByQuery },
+    props: newProps,
+    style: newStyle
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.radium.index.visited" id="apidoc.element.radium.index.visited">
+        function <span class="apidocSignatureSpan">radium.index.</span>visited
+        <span class="apidocSignatureSpan">(_ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visited(_ref) {
+  var addCSS = _ref.addCSS,
+      appendImportantToEachValue = _ref.appendImportantToEachValue,
+      config = _ref.config,
+      cssRuleSetToString = _ref.cssRuleSetToString,
+      hash = _ref.hash,
+      props = _ref.props,
+      style = _ref.style;
+
+  // eslint-disable-line no-shadow
+  var className = props.className;
+
+  var newStyle = Object.keys(style).reduce(function (newStyleInProgress, key) {
+    var value = style[key];
+    if (key === &#x27;:visited&#x27;) {
+      value = appendImportantToEachValue(value);
+      var ruleCSS = cssRuleSetToString(&#x27;&#x27;, value, config.userAgent);
+      var visitedClassName = &#x27;rad-&#x27; + hash(ruleCSS);
+      var css = &#x27;.&#x27; + visitedClassName + &#x27;:visited&#x27; + ruleCSS;
+
+      addCSS(css);
+      className = (className ? className + &#x27; &#x27; : &#x27;&#x27;) + visitedClassName;
+    } else {
+      newStyleInProgress[key] = value;
+    }
+
+    return newStyleInProgress;
+  }, {});
+
+  return {
+    props: className === props.className ? null : { className: className },
+    style: newStyle
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.radium.merge_styles" id="apidoc.module.radium.merge_styles">module radium.merge_styles</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.radium.merge_styles.isNestedStyle" id="apidoc.element.radium.merge_styles.isNestedStyle">
+        function <span class="apidocSignatureSpan">radium.merge_styles.</span>isNestedStyle
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isNestedStyle(value) {
+  // Don&#x27;t merge objects overriding toString, since they should be converted
+  // to string values.
+  return value &#x26;&#x26; value.constructor === Object &#x26;&#x26; value.toString === Object.prototype.toString;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.radium.merge_styles.mergeStyles" id="apidoc.element.radium.merge_styles.mergeStyles">
+        function <span class="apidocSignatureSpan">radium.merge_styles.</span>mergeStyles
+        <span class="apidocSignatureSpan">(styles)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mergeStyles(styles) {
+  var result = {};
+
+  styles.forEach(function (style) {
+    if (!style || (typeof style === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : _typeof(style)) !== &#x27;object&#x27;) {
+      return;
+    }
+
+    if (Array.isArray(style)) {
+      style = mergeStyles(style);
+    }
+
+    Object.keys(style).forEach(function (key) {
+      // Simple case, nothing nested
+      if (!isNestedStyle(style[key]) || !isNestedStyle(result[key])) {
+        result[key] = style[key];
+        return;
+      }
+
+      // If nested media, don&#x27;t merge the nested styles, append a space to the
+      // end (benign when converted to CSS). This way we don&#x27;t end up merging
+      // media queries that appear later in the chain with those that appear
+      // earlier.
+      if (key.indexOf(&#x27;@media&#x27;) === 0) {
+        var newKey = key;
+        // eslint-disable-next-line no-constant-condition
+        while (true) {
+          newKey += &#x27; &#x27;;
+          if (!result[newKey]) {
+            result[newKey] = style[key];
+            return;
+          }
+        }
+      }
+
+      // Merge all other nested styles recursively
+      result[key] = mergeStyles([result[key], style[key]]);
+    });
+  });
+
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.radium.mouse_up_listener" id="apidoc.module.radium.mouse_up_listener">module radium.mouse_up_listener</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.radium.mouse_up_listener.__triggerForTests" id="apidoc.element.radium.mouse_up_listener.__triggerForTests">
+        function <span class="apidocSignatureSpan">radium.mouse_up_listener.</span>__triggerForTests
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _handleMouseUp() {
+  _callbacks.forEach(function (callback) {
+    callback();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.radium.mouse_up_listener.subscribe" id="apidoc.element.radium.mouse_up_listener.subscribe">
+        function <span class="apidocSignatureSpan">radium.mouse_up_listener.</span>subscribe
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function subscribe(callback) {
+  if (_callbacks.indexOf(callback) === -1) {
+    _callbacks.push(callback);
+  }
+
+  if (!_mouseUpListenerIsActive) {
+    window.addEventListener(&#x27;mouseup&#x27;, _handleMouseUp);
+    _mouseUpListenerIsActive = true;
+  }
+
+  return {
+    remove: function remove() {
+      var index = _callbacks.indexOf(callback);
+      _callbacks.splice(index, 1);
+
+      if (_callbacks.length === 0 &#x26;&#x26; _mouseUpListenerIsActive) {
+        window.removeEventListener(&#x27;mouseup&#x27;, _handleMouseUp);
+        _mouseUpListenerIsActive = false;
+      }
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  newProps.onBlur = function (e) {
+    existingOnBlur &#x26;&#x26; existingOnBlur(e);
+    setState(&#x27;:focus&#x27;, false);
+  };
+}
+
+if (style[&#x27;:active&#x27;] &#x26;&#x26; !getComponentField(&#x27;_radiumMouseUpListener&#x27;) &#x26;&#x26; ExecutionEnvironment
+.canUseEventListeners) {
+  newComponentFields._radiumMouseUpListener = _mouseUpListener2.default.<span class="apidocCodeKeywordSpan">subscribe</span>(function
+ () {
+    Object.keys(getComponentField(&#x27;state&#x27;)._radiumStyleState).forEach(function (key) {
+      if (getState(&#x27;:active&#x27;, key) === &#x27;viamousedown&#x27;) {
+        setState(&#x27;:active&#x27;, false, key);
+      }
+    });
+  });
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.radium.prefixer" id="apidoc.module.radium.prefixer">module radium.prefixer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.radium.prefixer.getPrefixedKeyframes" id="apidoc.element.radium.prefixer.getPrefixedKeyframes">
+        function <span class="apidocSignatureSpan">radium.prefixer.</span>getPrefixedKeyframes
+        <span class="apidocSignatureSpan">(userAgent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPrefixedKeyframes(userAgent) {
+  return getPrefixer(userAgent).prefixedKeyframes;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.radium.prefixer.getPrefixedStyle" id="apidoc.element.radium.prefixer.getPrefixedStyle">
+        function <span class="apidocSignatureSpan">radium.prefixer.</span>getPrefixedStyle
+        <span class="apidocSignatureSpan">(style, userAgent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPrefixedStyle(style, userAgent) {
+  var styleWithFallbacks = transformValues(style);
+  var prefixer = getPrefixer(userAgent);
+  var prefixedStyle = prefixer.prefix(styleWithFallbacks);
+  return prefixedStyle;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.radium.style_keeper" id="apidoc.module.radium.style_keeper">module radium.style_keeper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.radium.style_keeper.style_keeper" id="apidoc.element.radium.style_keeper.style_keeper">
+        function <span class="apidocSignatureSpan">radium.</span>style_keeper
+        <span class="apidocSignatureSpan">(userAgent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function StyleKeeper(userAgent) {
+  _classCallCheck(this, StyleKeeper);
+
+  this._userAgent = userAgent;
+  this._listeners = [];
+  this._cssSet = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.radium.style_keeper.prototype" id="apidoc.module.radium.style_keeper.prototype">module radium.style_keeper.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.radium.style_keeper.prototype._emitChange" id="apidoc.element.radium.style_keeper.prototype._emitChange">
+        function <span class="apidocSignatureSpan">radium.style_keeper.prototype.</span>_emitChange
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _emitChange() {
+  this._listeners.forEach(function (listener) {
+    return listener();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  };
+
+  StyleKeeper.prototype.addCSS = function addCSS(css) {
+var _this2 = this;
+
+if (!this._cssSet[css]) {
+  this._cssSet[css] = true;
+  this.<span class="apidocCodeKeywordSpan">_emitChange</span>();
+}
+
+return {
+  // Must be fat arrow to capture `this`
+  remove: function remove() {
+    delete _this2._cssSet[css];
+    _this2._emitChange();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.radium.style_keeper.prototype.addCSS" id="apidoc.element.radium.style_keeper.prototype.addCSS">
+        function <span class="apidocSignatureSpan">radium.style_keeper.prototype.</span>addCSS
+        <span class="apidocSignatureSpan">(css)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addCSS(css) {
+  var _this2 = this;
+
+  if (!this._cssSet[css]) {
+    this._cssSet[css] = true;
+    this._emitChange();
+  }
+
+  return {
+    // Must be fat arrow to capture `this`
+    remove: function remove() {
+      delete _this2._cssSet[css];
+      _this2._emitChange();
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.radium.style_keeper.prototype.getCSS" id="apidoc.element.radium.style_keeper.prototype.getCSS">
+        function <span class="apidocSignatureSpan">radium.style_keeper.prototype.</span>getCSS
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCSS() {
+  return Object.keys(this._cssSet).join(&#x27;\n&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.radium.style_keeper.prototype.subscribe" id="apidoc.element.radium.style_keeper.prototype.subscribe">
+        function <span class="apidocSignatureSpan">radium.style_keeper.prototype.</span>subscribe
+        <span class="apidocSignatureSpan">(listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function subscribe(listener) {
+  var _this = this;
+
+  if (this._listeners.indexOf(listener) === -1) {
+    this._listeners.push(listener);
+  }
+
+  return {
+    // Must be fat arrow to capture `this`
+    remove: function remove() {
+      var listenerIndex = _this._listeners.indexOf(listener);
+      if (listenerIndex &#x3e; -1) {
+        _this._listeners.splice(listenerIndex, 1);
+      }
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  newProps.onBlur = function (e) {
+    existingOnBlur &#x26;&#x26; existingOnBlur(e);
+    setState(&#x27;:focus&#x27;, false);
+  };
+}
+
+if (style[&#x27;:active&#x27;] &#x26;&#x26; !getComponentField(&#x27;_radiumMouseUpListener&#x27;) &#x26;&#x26; ExecutionEnvironment
+.canUseEventListeners) {
+  newComponentFields._radiumMouseUpListener = _mouseUpListener2.default.<span class="apidocCodeKeywordSpan">subscribe</span>(function
+ () {
+    Object.keys(getComponentField(&#x27;state&#x27;)._radiumStyleState).forEach(function (key) {
+      if (getState(&#x27;:active&#x27;, key) === &#x27;viamousedown&#x27;) {
+        setState(&#x27;:active&#x27;, false, key);
+      }
+    });
+  });
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
